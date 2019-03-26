@@ -63,7 +63,7 @@
 			let content = myForm.querySelector('input[name=content]').value
 			this.model.save(name, content).then(function(object) {
 	    		let li = document.createElement('li')
-	    		li.innerText = `${item.name}: ${item.content}`
+	    		li.innerText = `${object.attributes.name}: ${object.attributes.content}`
 	    		let messageList = document.querySelector('#messageList')
 	    		messageList.appendChild(li)
 	    		myForm.querySelector('input[name=content]').value = ''
